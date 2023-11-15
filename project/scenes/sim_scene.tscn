@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://0lf43u171vc6"]
+
+[node name="sim_scene" type="Node2D"]
