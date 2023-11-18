@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://c123b13eberl0"]
+[gd_scene load_steps=3 format=3 uid="uid://c123b13eberl0"]
 
-[node name="player" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://dk1brl81ja7li" path="res://src/Paddle.tscn" id="1_ft70c"]
+[ext_resource type="Script" path="res://src/Player.cs" id="1_plhrp"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_plhrp")
+
+[node name="Paddle" parent="." instance=ExtResource("1_ft70c")]
