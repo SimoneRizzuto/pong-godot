@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://s6v1jbacwtc1"]
+
+[ext_resource type="Script" path="res://ball.cs" id="1_pm3as"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3a7lb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0illv"]
+size = Vector2(18.5, 16)
+
+[node name="ball" type="CharacterBody2D"]
+position = Vector2(553, 18)
+script = ExtResource("1_pm3as")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8.75, 6)
+scale = Vector2(18.5, 16)
+texture = SubResource("CanvasTexture_3a7lb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.75, 6)
+shape = SubResource("RectangleShape2D_0illv")

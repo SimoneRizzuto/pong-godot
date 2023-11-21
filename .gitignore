@@ -16,6 +16,7 @@ mono_crash.*.json
 
 # VScode ignores
 .vscode
+.vs
 
 # Created by https://www.toptal.com/developers/gitignore/api/rider
 # Edit at https://www.toptal.com/developers/gitignore?templates=rider
