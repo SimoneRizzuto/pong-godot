@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class paddle : Area2D
+public partial class paddle_test : RigidBody2D
 {
 
     [Export]

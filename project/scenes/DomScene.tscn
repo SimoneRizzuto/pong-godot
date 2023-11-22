@@ -1,20 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://1ts82w6k10do"]
 
-[ext_resource type="PackedScene" uid="uid://d0734280e4565" path="res://src/paddle_test.tscn" id="2_1buba"]
+[ext_resource type="PackedScene" uid="uid://d0734280e4565" path="res://src/paddle_test.tscn" id="2_hcts8"]
 [ext_resource type="PackedScene" uid="uid://s6v1jbacwtc1" path="res://src/ball.tscn" id="2_mb6mn"]
 [ext_resource type="PackedScene" uid="uid://c6liwyi8jnpb8" path="res://boundary.tscn" id="3_0vdu2"]
 
 [node name="dom_scene" type="Node2D"]
 position = Vector2(-12, 267)
 
-[node name="ball" parent="." instance=ExtResource("2_mb6mn")]
+[node name="Ball" parent="." instance=ExtResource("2_mb6mn")]
 position = Vector2(571, -233)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("2_1buba")]
-position = Vector2(69, 188)
+[node name="PaddleTest" parent="." instance=ExtResource("2_hcts8")]
+position = Vector2(42, 165)
 
-[node name="boundary" parent="." instance=ExtResource("3_0vdu2")]
+[node name="UpperBoundary" parent="." instance=ExtResource("3_0vdu2")]
 position = Vector2(12, -267)
 
-[node name="boundary2" parent="." instance=ExtResource("3_0vdu2")]
+[node name="LowerBoundary" parent="." instance=ExtResource("3_0vdu2")]
 position = Vector2(12, 385)

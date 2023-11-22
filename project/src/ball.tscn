@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0illv"]
 size = Vector2(18.5, 16)
 
-[node name="ball" type="CharacterBody2D"]
+[node name="Ball" type="CharacterBody2D"]
 position = Vector2(553, 18)
 script = ExtResource("1_pm3as")
 metadata/_edit_group_ = true

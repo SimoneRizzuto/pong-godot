@@ -16,3 +16,5 @@ texture = SubResource("CanvasTexture_h3rqy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13, 79)
 shape = SubResource("RectangleShape2D_4j6fk")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
