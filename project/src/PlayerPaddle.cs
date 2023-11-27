@@ -1,15 +1,10 @@
-using System;
-using System.Linq;
 using Godot;
 using Ponggodot.shared;
-public partial class PlayerPaddle : Area2D
+public partial class PlayerPaddle : CharacterBody2D
 {
     [Export] public int Speed { get; set; } = 400;
-
-    private bool collidingWithWall;
     
     private Sprite2D sprite;
-    private Vector2 screenSize;
     public override void _Ready()
     {
         // Fetching type of child - unneeded code for this project, but it might be useful in the future, keeping it here.
@@ -26,9 +21,11 @@ public partial class PlayerPaddle : Area2D
     }
     public override void _Process(double delta)
     {
-        if (collidingWithWall) return;
-        
-        screenSize = GetViewportRect().Size;
+        var collision = MoveAndCollide(Velocity * (float)delta);
+        if (collision != null)
+        {
+            return;
+        }
         
         var velocity = SetVelocity();
         if (velocity.Length() > 0)
@@ -37,11 +34,6 @@ public partial class PlayerPaddle : Area2D
         }
         
         Position += velocity * (float)delta;
-        
-        
-        //Position = new Vector2(Position.X, Mathf.Clamp(Position.Y, 0 - sprite.Scale.Y, screenSize.Y - sprite.Scale.Y));
-        
-        
     }
 
     private Vector2 SetVelocity()
@@ -56,10 +48,5 @@ public partial class PlayerPaddle : Area2D
             velocity.Y += 1;
         }
         return velocity;
-    }
-
-    private void OnBodyEntered(Node2D body)
-    {
-        collidingWithWall = true;
     }
 }

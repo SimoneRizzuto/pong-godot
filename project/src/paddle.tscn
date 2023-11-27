@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4j6fk"]
 size = Vector2(26, 160)
 
-[node name="Paddle" type="Area2D"]
+[node name="Paddle" type="CharacterBody2D"]
 position = Vector2(43, 194)
 
 [node name="White" type="Sprite2D" parent="."]
@@ -16,5 +16,3 @@ texture = SubResource("CanvasTexture_h3rqy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(13, 80)
 shape = SubResource("RectangleShape2D_4j6fk")
-
-[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

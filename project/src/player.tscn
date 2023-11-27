@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c123b13eberl0"]
 
-[ext_resource type="PackedScene" uid="uid://dk1brl81ja7li" path="res://src/Paddle.tscn" id="1_ft70c"]
+[ext_resource type="PackedScene" uid="uid://dk1brl81ja7li" path="res://src/paddle.tscn" id="1_ft70c"]
 [ext_resource type="Script" path="res://src/PlayerPaddle.cs" id="2_kqbeq"]
 
 [node name="Player" type="Node2D"]
@@ -8,5 +8,3 @@
 [node name="Paddle" parent="." instance=ExtResource("1_ft70c")]
 position = Vector2(0, 0)
 script = ExtResource("2_kqbeq")
-
-[connection signal="body_entered" from="Paddle" to="Paddle" method="OnBodyEntered"]

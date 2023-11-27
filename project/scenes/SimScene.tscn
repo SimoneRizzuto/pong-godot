@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://0lf43u171vc6"]
+[gd_scene load_steps=3 format=3 uid="uid://0lf43u171vc6"]
 
 [ext_resource type="PackedScene" uid="uid://c123b13eberl0" path="res://src/Player.tscn" id="1_24ui8"]
+[ext_resource type="PackedScene" uid="uid://c6liwyi8jnpb8" path="res://boundary.tscn" id="2_ctw86"]
 
 [node name="SimScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_24ui8")]
 position = Vector2(157, 201)
+
+[node name="Boundary1" parent="." instance=ExtResource("2_ctw86")]
+
+[node name="Boundary2" parent="." instance=ExtResource("2_ctw86")]
+position = Vector2(0, 652)
